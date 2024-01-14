@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Burst Quiz</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <div id="startCard" class="card active">
+        <div class="card-header bg-danger-subtle text-center">
+            <h3> Brain Burst Quiz</h3>
+        </div>
+        <div class="card-body">
+            <p class="lead">
+                Ready for a <span class="text-danger">mind explosion</span>?<br>
+                Let the game begin, test your knowledge!
+            </p>
+            <button id="startBtn" class="btn btn-warning w-100">Play Game!</button>
+        </div>
+    </div>
+    <div id="gameOptionsCard" class="card">
+        <div class="card-header  bg-danger-subtle text-center">
+            <h3>Game Settings</h3>
+        </div>
+        <div class="card-body">
+            <div class="gameOptionForm">
+                <div class="mb-2">
+                    <h6>Number of Questions:</h6>
+                    <input type="number" name="questionAmountTxt" id="questionAmountTxt" class="form-control" value="10"
+                        max="50" min="1">
+                </div>
+                <div class="mb-2">
+                    <h6>Select Category:</h6>
+                    <select name="categorySelect" id="categorySelect" class="form-control">
+                        <option value="0">Any Categories</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <h6>Select Difficulty:</h6>
+                    <select name="difficultySelect" id="difficultySelect" class="form-control">
+                        <option value="0">Any Difficulty</option>
+                        <option value="easy">Puzzled Peasant</option>
+                        <option value="medium">Novice</option>
+                        <option value="hard">Sphinx's Challenge </option>
+                    </select>
+                </div>
+                <div class="my-2">
+                    <button class="btn btn-dark w-100 btn-lg text-warning" id="saveAndStart">Start game
+                        now!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="questionCard" class="card">
+        <div class="card-header border-0 d-flex align-items-center justify-content-between bg-danger-subtle">
+            <h5>Brain Burst Quiz</h5>
+            <!-- <button>asdsa</button> -->
+            <div class="timeLine" id="timer">
+            </div>
+        </div>
+        <div class="card-body border-0 questionBody">
+            <p class="qustionTitle"></p>
+            <div class="options">
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="footerElement d-flex align-items-center justify-content-between">
+                <div class="questionIndex">
+
+                </div>
+                <button id="nextBtn" class="btn btn-success">Next</button>
+            </div>
+        </div>
+    </div>
+    <div id="finishGameCard" class="card">
+        <div class="card-header bg-danger-subtle text-center">
+            <h3> Brain Burst Quiz</h3>
+        </div>
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <div class="endIcon">
+                <i class="fa-solid fa-crown"></i>
+            </div>
+            <div>
+                <p class="lead results"></p>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-warning" id="endGameBtn">End Game</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <span><i class="fa-solid fa-check"></i></span>
+        <span><i class="fa-solid fa-times"></i></span> -->
+    <!-- js -->
+    <script src="js/UI.js"></script>
+    <script src="js/Category.js"></script>
+    <script src="js/Question.js"></script>
+    <script src="js/Quiz.js"></script>
+    <script src="js/app.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
